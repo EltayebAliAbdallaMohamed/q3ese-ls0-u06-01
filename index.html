@@ -11,10 +11,25 @@
     <div id="fileSelector" class="file-selector">
       <label for="jsonFileSelect"><strong>Select Lesson File:</strong></label>
       <select id="jsonFileSelect" aria-label="Select a JSON lesson file">
-        <option value="">-- Choose a lesson --</option>
-        <option value="Q3eSE_LS0_U06_01_QClassroom.json">Q3eSE_LS0_U06_01_QClassroom</option>
+        <option value="">-- Choose a lesson --</option>        
+        <option value="Q3eSE_LS0_U06_01_QClassroom.json">Unit 5 - Page 100 </option>
       </select>
     </div>
+
+    <section class="qr-section" aria-label="Share app">
+      <button
+        type="button"
+        id="toggleQrButton"
+        aria-expanded="false"
+        aria-controls="qrPanel"
+      >Show app QR code</button>
+      <div id="qrPanel" class="qr-panel" hidden>
+        <p>Scan this code to open the app:</p>
+        <div id="qrCode" class="qr-code" aria-label="QR code for this app"></div>
+        <p id="qrStatus" class="qr-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
     <h1 id="lessonTitle" aria-label="Lesson title"></h1>
     <div id="speakingIndicator" class="speaking-indicator" role="status" aria-live="polite">
       <span class="pulse">🔊</span> Speaking...
@@ -63,6 +78,8 @@
   <footer role="contentinfo">
     <p>Created by: <span>Eltayeb Ali Abdalla Mohamed - King Saud University</span> | <span>© 2025 - All rights reserved</span></p>
   </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
